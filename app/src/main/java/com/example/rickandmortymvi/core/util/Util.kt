@@ -1,0 +1,5 @@
+package com.example.rickandmortymvi.core.util
+
+object Util {
+    const val BASE_URL="https://rickandmortyapi.com/api/"
+}
