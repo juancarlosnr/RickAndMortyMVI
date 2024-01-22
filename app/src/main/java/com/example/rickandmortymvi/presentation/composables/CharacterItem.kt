@@ -2,6 +2,7 @@ package com.example.rickandmortymvi.presentation.composables
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -16,13 +17,14 @@ import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
 
 @Composable
-fun CharacterItem(url: String) {
+fun CharacterItem(url: String, characterClicked: () -> Unit) {
     Box(
         modifier = Modifier
             .padding(6.dp)
             .fillMaxWidth()
             .clip(shape = RoundedCornerShape(12.dp))
-            .background(color = MaterialTheme.colorScheme.onPrimaryContainer),
+            .background(color = MaterialTheme.colorScheme.onPrimaryContainer)
+            .clickable { characterClicked() },
     ) {
         Image(
             painter = rememberAsyncImagePainter(model = url),

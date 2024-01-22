@@ -23,6 +23,8 @@ hilt = "2.48"
 # Coil
 coil = "2.5.0"
 
+# Compose
+navegation-compose = "2.6.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -52,6 +54,9 @@ logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-intercep
 
 #Coil
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil"}
+
+#Compose
+navegation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "coil"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

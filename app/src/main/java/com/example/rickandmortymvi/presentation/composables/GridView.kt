@@ -12,7 +12,8 @@ import com.example.rickandmortymvi.domain.model.CharacterBO
 
 @Composable
 fun MyGridView(
-    characters: List<CharacterBO>
+    characters: List<CharacterBO>,
+    characterClicked:(characterId:String) -> Unit
 ) {
     LazyVerticalGrid(
         contentPadding = PaddingValues(4.dp),
@@ -21,8 +22,8 @@ fun MyGridView(
     ) {
         items(characters, key = {
             it.id
-        }) { img ->
-            CharacterItem(img.image)
+        }) { character ->
+            CharacterItem(character.image){characterClicked(character.id.toString())}
         }
     }
 }

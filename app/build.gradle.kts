@@ -76,6 +76,9 @@ dependencies {
     //Coil
     implementation(libs.coil.compose)
 
+    //Compose
+    implementation(libs.navegation.compose)
+
     //Testing
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
