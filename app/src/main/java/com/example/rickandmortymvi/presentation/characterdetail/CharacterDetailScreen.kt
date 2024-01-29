@@ -12,10 +12,11 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.example.rickandmortymvi.presentation.composables.CharacterItem
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CharacterDetailScreen(state: CharacterDetailState,navigateBack: () -> Unit) {
+fun CharacterDetailScreen(state:CharacterDetailState,navigateBack: () -> Unit) {
     Scaffold(topBar = {
         TopAppBar(
             title = {
@@ -32,6 +33,9 @@ fun CharacterDetailScreen(state: CharacterDetailState,navigateBack: () -> Unit) 
                 .padding(pv),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            CharacterItem(url = state.character.image) {
+                
+            }
         }
     }
 }
